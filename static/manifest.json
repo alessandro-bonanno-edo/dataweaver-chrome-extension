@@ -1,0 +1,20 @@
+{
+	"name": "DataWeaver",
+	"description": "A Svelte browser extension tho extract data from eDo web pages.",
+	"version": "0.0.1",
+	"manifest_version": 3,
+	"author": "eDreams Odigeo - Uncharted Pod",
+	"devtools_page": "devtools.html",
+	"permissions": ["activeTab", "storage"],
+	"host_permissions": ["<all_urls>"],
+	"web_accessible_resources": [
+		{
+			"resources": ["devtools.js"],
+			"matches": ["<all_urls>"]
+		}
+	],
+	"background": {
+		"service_worker": "background.js",
+		"type": "module"
+	}
+}
